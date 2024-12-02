@@ -1,0 +1,120 @@
+/* Bloc DoctorCard */
+.doctor-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 300px; /* Hauteur fixe pour uniformiser les cartes */
+  width: 100%; /* Prend toute la largeur disponible */
+}
+
+/* Informations du médecin */
+.doctor-info {
+  flex: 1;
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+.doctor-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.doctor-specialty {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.doctor-address, .doctor-sector {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.appointment-button {
+  background-color: #1d5f0d !important;
+  color: white;
+  text-transform: none;
+  margin-top: 40px !important;
+}
+
+.appointment-button:hover {
+  background-color: #b2e6a5 !important;
+  color: #1d5f0d;
+
+}
+
+/* Bloc des créneaux horaires */
+.doctor-slots {
+  flex: 2;
+}
+
+/* En-tête des horaires */
+.slots-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Grille des créneaux */
+.slots-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px; /* Ajout d’un espacement entre les colonnes */
+}
+
+.slot-day {
+  flex: 1;
+  text-align: center;
+  gap:15px;
+}
+
+/* Nom du jour et date */
+.day-name {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px; /* Espacement entre le jour et la date */
+}
+
+.slot-date {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 10px; /* Espacement entre la date et les créneaux */
+}
+
+/* Boutons des créneaux horaires */
+.slot-time {
+  display: block;
+  font-size: 12px;
+  background-color: #b2e6a5 !important;
+  color: #1d5f0d !important;
+  margin-bottom: 10px !important; /* Ajout d’un espacement entre les créneaux */
+  padding: 5px 10px;
+  border: 1px solid #1d5f0d;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px !important;
+}
+
+.slot-time:hover {
+  background-color: #1d5f0d !important;
+  color: white !important;
+}
+
+/* Lien pour voir plus d'horaires */
+.view-more {
+  margin-top: 10px;
+  font-size: 12px;
+  text-transform: none;
+  color: #1d5f0d !important;
+}
+
+.view-more:hover {
+  text-decoration: underline;
+}

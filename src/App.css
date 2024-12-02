@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
+@import "leaflet/dist/leaflet.css";
+
+
+/* Paramètrage global */
+button {
+    background-color: #1d5f0d; /* Vert par défaut */
+    color: white; /* Texte blanc */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #1d5f0d !important; /* Couleur de fond respectée */
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.user-menu-name {
+  margin-left: 8px;
+  font-size: 1em;
+}
+
+/* User menu styles */
+.user-menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Force l'alignement à droite */
+}
+
+.user-menu-button {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.user-menu-name {
+  margin-left: 8px;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Coupe le texte avec "..." si trop long */
+  max-width: 120px; /* Ajustez la largeur maximale */
+  white-space: nowrap;
+}
+
+.user-dropdown-menu {
+  background-color: #fff;
+  color: #000;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  font-size: 0.9em;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsivity */
+@media screen and (max-width: 768px) {
+  .navbar-toolbar {
+    flex-direction: column; /* Place les éléments les uns sous les autres */
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+
+  .user-menu {
+    margin-top: 10px;
+    justify-content: flex-start;
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search bar styles */
+.search-bar {
+  margin: 20px auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 8px; /* Espacement entre les champs */
+  width: 100%;
+  max-width: 800px; /* Largeur maximale de la barre de recherche */
+}
+
+.search-input {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar .search-button {
+  background-color: #1d5f0d !important; /* Vert par défaut */
+  color: white !important; /* Texte blanc */
+  text-transform: none; /* Désactive la capitalisation automatique */
+  font-size: 14px;
+  border: none; /* Supprime les bordures */
+  cursor: pointer; /* Ajoute un pointeur au survol */
+}
+
+.search-button:hover {
+  background-color: #2f8634;
+}
+
+/* Hero section styles */
+.hero-section {
+  background-color: #b2e6a5;
+  color: #000;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Search Results Page */
+.search-results-page {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.results-title {
+  color: #1d5f0d;
+  font-weight: bold;
+  margin: 10px !important;
+  font-size: 12px;
+}
+
+.results-description {
+  color: #555;
+  font-size: 16px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  border-color: #1d5f0d;
+  color: #1d5f0d;
+}
+
+.filter-button:hover {
+  background-color: #1d5f0d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Conteneur principal des résultats*/
+.search-results-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement les colonnes */
+  align-items: flex-start; /* Aligne les colonnes en haut */
+  gap: 50px; /* Espacement minimal entre les colonnes */
+  padding: 20px;
+  max-width: 1400px; /* Limite la largeur totale du conteneur */
+  margin: 0 auto; /* Centre le conteneur sur la page */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Contenu principal (DoctorCards) */
+.results-main {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacement entre les DoctorCards */
+}
+
+/* Sidebar */
+.results-sidebar {
+  flex: 1.5; /* Moins large que la colonne principale */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: calc(2 * 300px + 60px); /* Hauteur de deux DoctorCards + padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Assure que le contenu s'étend uniformément */
+}
+
+/* Carte */
+.map-sidebar {
+  flex-grow: 1; /* La carte prend tout l'espace disponible dans la sidebar */
+  height: 400px; /* Hauteur définie pour la carte */
+  width: 100%;
+  border-radius: 10px;
 }

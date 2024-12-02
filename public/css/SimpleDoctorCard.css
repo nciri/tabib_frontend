@@ -1,0 +1,62 @@
+/* Styles spécifiques à SimpleDoctorCard */
+.simple-doctor-grid {
+  font-size: 14px;
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    justify-content: space-between; /* Espacement uniforme entre les cartes */
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 20px;
+  }
+
+.simple-doctor-card {
+  width: 90%;
+  max-width: 350px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour un effet fluide */
+}
+
+.simple-doctor-card:hover {
+  background-color: #b2e6a5; /* Couleur lors du survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Légère augmentation de l'ombre */
+}
+
+.simple-doctor-card-container {
+  display: flex;
+  align-items: center; /* Aligne la photo et les infos verticalement */
+  gap: 15px; /* Espacement entre la photo et le texte */
+}
+
+/* Image de profil */
+.simple-doctor-image-container {
+  width: 60px; /* Taille de la photo réduite */
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%; /* Forme circulaire */
+  border: 1px solid #ddd;
+  flex-shrink: 0; /* Empêche la réduction de l'image */
+}
+
+.simple-doctor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cadre */
+}
+
+/* Informations du médecin */
+.simple-doctor-info {
+  font-size: 14px; /* Taille uniforme pour tout le texte */
+  flex: 1; /* Permet au bloc d'informations de s'étendre */
+}
+
+.simple-doctor-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.simple-doctor-specialty, .simple-doctor-address {
+  color: #555;
+  margin-bottom: 5px;
+}

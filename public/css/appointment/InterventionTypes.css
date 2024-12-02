@@ -1,0 +1,171 @@
+/* Conteneur principal */
+.appointment-details-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+
+}
+
+/* Titre principal */
+.appointment-title {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.appointment-subtitle {
+  text-align: left;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Contenu principal */
+.appointment-details-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* Section principale */
+.appointment-main {
+  flex: 3;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  margin-bottom: 20px;
+  background: none;
+  color: #1d5f0d !important;
+  text-transform: none !important;
+  cursor: pointer;
+}
+
+.consultation-title {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 20px !important;
+}
+
+.consultation-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.consultation-reason {
+  text-align: left;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-transform: none;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.consultation-reason:hover {
+  background-color: #b2e6a5 !important;
+}
+
+/* Sidebar */
+.appointment-sidebar {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.doctor-card {
+  text-align: center;
+}
+
+.doctor-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.doctor-name {
+  font-weight: bold;
+}
+
+.doctor-specialty {
+  color: #555;
+}
+
+/* Résumé du rendez-vous */
+.appointment-summary {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.summary-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+}
+
+.summary-list li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.list-bordered {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.list-item {
+  border-bottom: 1px solid #ddd !important;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+
+.confirmation-main {
+  flex: 2;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center; /* Centre le contenu horizontalement */
+  text-align: center;
+}
+
+.confirmation-details {
+  text-align: center;
+}
+
+.confirm-button {
+  background-color: #007bff; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  text-transform: none; /* Désactive les majuscules */
+  padding: 15px; /* Ajuste la hauteur du bouton */
+  border-radius: 5px; /* Ajoute des coins arrondis */
+  font-weight: bold; /* Rend le texte gras */
+  font-size: 16px; /* Taille du texte */
+  max-width: 300px; /* Largeur maximale du bouton */
+  width: 100%; /* Prend toute la largeur du conteneur */
+  margin: 20px auto 0; /* Centrage vertical et horizontal */
+}
